@@ -1,0 +1,101 @@
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.Panel;
+import java.awt.TextArea;
+import java.awt.TextField;
+
+
+public class Calculator {
+	Frame f;
+	Label titleL;
+	Button oneB;
+	Button twoB;
+	Button threeB;
+	Button fourB;
+	Button fiveB;
+	Button sixB;
+	Button sevenB;
+	Button eightB;
+	Button nineB;
+	Button zeroB;
+	Button hapB;
+	Button chaB;
+	Button gobB;
+	Button nanumB;
+	Button resultB;
+	
+	Panel centerP;
+	
+	TextField displayTF;
+	
+	
+	private void init(){
+		
+		f = new Frame("Calculator");
+		oneB = new Button("1");
+		twoB = new Button("2");
+		threeB = new Button("3");
+		fourB = new Button("4");
+		fiveB = new Button("5");
+		sixB = new Button("6");
+		sevenB = new Button("7");
+		eightB = new Button("8");
+		nineB = new Button("9");
+		zeroB = new Button("0");
+		hapB = new Button("+");
+		chaB = new Button("-");
+		gobB = new Button("*");
+		nanumB = new Button("/");
+		resultB = new Button("=");
+		
+		centerP = new Panel();
+		centerP.setLayout(new GridLayout(4,4,2,2));
+		centerP.setBackground(Color.LIGHT_GRAY);
+		centerP.add(oneB);
+		centerP.add(twoB);
+		centerP.add(threeB);
+		centerP.add(hapB);
+		centerP.add(fourB);
+		centerP.add(fiveB);
+		centerP.add(sixB);
+		centerP.add(chaB);
+		centerP.add(sevenB);
+		centerP.add(eightB);
+		centerP.add(nineB);
+		centerP.add(gobB);
+		centerP.add(zeroB);
+		centerP.add(nanumB);
+		centerP.add(resultB);
+
+		displayTF = new TextField();
+	    displayTF.setBackground(Color.DARK_GRAY);
+	    displayTF.setForeground(Color.WHITE);
+		
+		
+		f.setLayout(new BorderLayout());
+		f.add(displayTF,BorderLayout.NORTH);
+		f.add(centerP,BorderLayout.CENTER);
+		
+		
+		f.setSize(200,200);
+		f.setVisible(true);
+		
+		}
+	
+	public Calculator(){
+		init();
+		
+	}
+
+	
+
+	public static void main(String[] args) {
+		new Calculator();
+
+	}
+
+}

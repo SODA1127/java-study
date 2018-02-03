@@ -1,0 +1,15 @@
+/*
+Event program방법
+
+  1. XXXEvent Source 선정(Frame)(XXXEvent의 종류)--> WindowEvent
+  2. XXXEvent Handler 작성(클래스)-->WindowEvent Handler작성
+  3. Event Source 와 Event Handler를 연결해준다.
+  
+  
+  # XXXEvent Handler 클래스 작성방법
+       1.XXXEvent를 감지할수있는 XXXListener interface를 implement
+       (WindowEvent)       (WindowListener)
+  	   2.XXXListener 추상메쏘드 구현..
+	   (WindowListener)
+
+*/
